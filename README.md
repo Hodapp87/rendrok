@@ -6,7 +6,7 @@
 
 If you don't have `chisel` installed already, follow the instructions in its [readme](https://github.com/jpillora/chisel).
 
-Click [here](https://render.com/deploy?repo=https://github.com/evshiron/rendrok) to deploy [chisel](https://github.com/jpillora/chisel) server on [render.com](https://render.com) with generated password, which `rendrok` will obtain via [render.com](https://render.com) API.
+Click [here](https://render.com/deploy?repo=https://github.com/hodapp87/rendrok) to deploy [chisel](https://github.com/jpillora/chisel) server on [render.com](https://render.com) with generated password, which `rendrok` will obtain via [render.com](https://render.com) API.
 
 Go to [render.com Dashboard](https://dashboard.render.com/) -> Account Settings -> API Keys, and create a new API key for rendrok use.
 

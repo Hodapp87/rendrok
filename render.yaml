@@ -2,10 +2,16 @@ services:
   - type: web
     name: rendrok
     env: docker
-    repo: https://github.com/evshiron/rendrok
+    repo: https://github.com/Hodapp87/rendrok
     region: oregon
     plan: free
     branch: master
     envVars:
       - key: RENDROK_PASS
         generateValue: true
+      - key: CHISEL_SERVER_OPTIONS
+        value: "--reverse"
+        # Below: If you subsequently run 'chisel client' with
+        # something like "R:127.0.0.1:3000:$HOST:$PORT", the service
+        # URL will then proxy to the HTTP server at $HOST:$PORT.
+        #value: "--reverse --backend http://127.0.0.1:3000"

@@ -1,4 +1,20 @@
-FROM jpillora/chisel
+# Merging this in with:
+# https://hub.docker.com/r/jpillora/chisel/dockerfile
+
+# build stage
+FROM golang:alpine AS build-env
+LABEL maintainer="dev@jpillora.com"
+RUN apk update
+#RUN apk add git
+ENV CGO_ENABLED 0
+ADD . /src
+WORKDIR /src
+ENV GOBIN /src
+RUN go install github.com/jpillora/chisel@latest
+FROM alpine
+RUN apk update && apk add --no-cache ca-certificates bash
+WORKDIR /app
+COPY --from=build-env /src/chisel /app/chisel
 
 COPY docker/entrypoint.sh /app/entrypoint.sh
 RUN chmod +x /app/entrypoint.sh
