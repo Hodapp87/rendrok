@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 export AUTH="rendrok:$RENDROK_PASS"
 #echo $AUTH
