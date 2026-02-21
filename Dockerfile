@@ -11,9 +11,8 @@ RUN apk update
 ENV CGO_ENABLED 0
 ADD . /src
 WORKDIR /src
-RUN go build -o chisel
-# DEBUG: I should get version in here somehow still
-# container stage
+ENV GOBIN /src
+RUN go install github.com/jpillora/chisel@latest
 FROM alpine
 RUN apk update && apk add --no-cache ca-certificates bash
 WORKDIR /app
