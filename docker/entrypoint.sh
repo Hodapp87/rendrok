@@ -1,5 +1,4 @@
 #!/bin/bash
 
-export AUTH="rendrok:$RENDROK_PASS"
-#echo $AUTH
-/app/chisel server --reverse --backend http://127.0.0.1:3000
+export AUTH="rendrok:${RENDROK_PASS}"
+/app/chisel server ${CHISEL_SERVER_OPTIONS}
