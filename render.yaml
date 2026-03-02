@@ -3,7 +3,7 @@ services:
     name: rendrok
     env: docker
     repo: https://github.com/Hodapp87/rendrok
-    region: oregon
+    region: ohio
     plan: free
     branch: master
     envVars:
