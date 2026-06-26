@@ -10,8 +10,8 @@ services:
       - key: RENDROK_PASS
         generateValue: true
       - key: CHISEL_SERVER_OPTIONS
-        value: "--reverse"
+        #value: "--reverse"
         # Below: If you subsequently run 'chisel client' with
         # something like "R:127.0.0.1:3000:$HOST:$PORT", the service
         # URL will then proxy to the HTTP server at $HOST:$PORT.
-        #value: "--reverse --backend http://127.0.0.1:3000"
+        value: "--reverse --backend http://127.0.0.1:3000"
